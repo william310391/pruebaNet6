@@ -1,5 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
+var port = builder.Configuration["PORT"];
+
+//set listening urls
+builder.WebHost.UseUrls($"http://*:{port};http://localhost:3000");
 // Add services to the container.
 
 builder.Services.AddControllers();
