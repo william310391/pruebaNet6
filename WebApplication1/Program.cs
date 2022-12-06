@@ -1,6 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
 var port = builder.Configuration["PORT"];
+port = "3000";
 
 //set listening urls
 builder.WebHost.UseUrls($"http://*:{port};http://localhost:3000");
